@@ -80,4 +80,8 @@ body:
       placeholder: e.g., iOS 17.4, Android 13
 
   - type: textarea
-    id: ext
+    id: extra
+    attributes:
+      label: Additional Context
+      description: Add anything else that might help clarify your request.
+      placeholder: Attach mockups, diagrams, or other notes.
