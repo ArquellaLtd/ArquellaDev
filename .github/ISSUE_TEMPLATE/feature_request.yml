@@ -71,13 +71,13 @@ body:
     id: device
     attributes:
       label: Device Model (if relevant)
-      placeholder: e.g., iPad 9th Gen, Samsung Galaxy A50
+      placeholder: e.g., Samsung Galaxy A50
 
   - type: input
     id: os
     attributes:
       label: OS Version (if relevant)
-      placeholder: e.g., iOS 17.4, Android 13
+      placeholder: e.g., Android 13
 
   - type: textarea
     id: extra
