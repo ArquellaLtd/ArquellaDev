@@ -1,0 +1,97 @@
+name: 🐞 Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG] "
+labels: ["bug"]
+assignees: ["davydev"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      placeholder: Briefly describe the issue
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: Affected App
+      description: Which part of the system is impacted?
+      options:
+        - Panels
+        - Phones
+        - Maintenance
+        - Connect
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      description: Can this bug be consistently reproduced?
+      options:
+        - label: Always reproducible
+        - label: Happens occasionally
+        - label: Unable to reproduce
+        - label: Not tested yet
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How serious is this issue?
+      options:
+        - 🔴 Critical – blocks core functionality or crashes
+        - 🟠 Major – causes broken behavior or major disruption
+        - 🟡 Minor – doesn't break anything but is annoying
+        - ⚪ Cosmetic – visual only, no functional impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: "1. Go to...\n2. Click...\n3. Observe..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: What should have happened instead?
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Screenshots
+      description: Paste logs or add screenshots. Use Markdown for code formatting.
+      placeholder: "```\nPaste logs here\n```"
+      render: bash
+
+  - type: input
+    id: device
+    attributes:
+      label: Device Model
+      placeholder: e.g., Galaxy Tab A7, iPhone 13
+
+  - type: input
+    id: os
+    attributes:
+      label: OS Version
+      placeholder: e.g., Android 13, iOS 17.3
+
+  - type: input
+    id: related
+    attributes:
+      label: Related Issues or Links
+      placeholder: e.g., #45 or https://github.com/YOUR_REPO/issues/123
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Context
+      description: Anything else you want to share?
+      placeholder: Attach files, share observations, etc.
