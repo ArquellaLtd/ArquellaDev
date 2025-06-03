@@ -4,34 +4,80 @@ title: "[FEATURE] "
 labels: ["enhancement"]
 assignees: ["davydev"]
 body:
-  - type: textarea
-    id: problem
+  - type: input
+    id: summary
     attributes:
-      label: Problem or Use Case
-      description: What are you trying to solve or improve?
-      placeholder: "I'm often frustrated when..."
+      label: Feature Summary
+      placeholder: One-liner of what you’re requesting
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: Affected App
+      description: Where would this feature apply?
+      options:
+        - Panels
+        - Phones
+        - Maintenance
+        - Connect
     validations:
       required: true
 
   - type: textarea
-    id: solution
+    id: use_case
     attributes:
-      label: Desired Solution
-      description: Describe how you'd like the feature to work.
-      placeholder: "It would be great if..."
+      label: Use Case / Motivation
+      description: What’s the problem you're trying to solve or improve?
+      placeholder: "I’d like to be able to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe your idea clearly.
+      placeholder: "The system could provide..."
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: Importance
+      description: How important is this feature to your workflow?
+      options:
+        - 🔴 Critical – urgently needed for core functionality
+        - 🟠 High – would significantly improve operations
+        - 🟡 Nice to Have – convenient but not essential
+        - ⚪ Low – minimal impact or experimental
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Considered Alternatives
-      description: Have you thought of other ways to solve this?
-      placeholder: "I've also tried..."
-  
-  - type: textarea
-    id: context
+      label: Alternatives Considered
+      description: Any workarounds or competing ideas?
+      placeholder: "I’ve tried..."
+
+  - type: input
+    id: related
     attributes:
-      label: Additional Context
-      description: Anything else to help us understand the request?
-      placeholder: "Screenshots, links to similar tools, etc."
+      label: Related Issues or Links
+      placeholder: e.g., #12 or https://github.com/YOUR_REPO/issues/456
+
+  - type: input
+    id: device
+    attributes:
+      label: Device Model (if relevant)
+      placeholder: e.g., iPad 9th Gen, Samsung Galaxy A50
+
+  - type: input
+    id: os
+    attributes:
+      label: OS Version (if relevant)
+      placeholder: e.g., iOS 17.4, Android 13
+
+  - type: textarea
+    id: ext
