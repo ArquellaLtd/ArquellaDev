@@ -75,13 +75,13 @@ body:
     id: device
     attributes:
       label: Device Model
-      placeholder: e.g., Galaxy Tab A7, iPhone 13
+      placeholder: e.g., Galaxy Tab A7
 
   - type: input
     id: os
     attributes:
       label: OS Version
-      placeholder: e.g., Android 13, iOS 17.3
+      placeholder: e.g., Android 13
 
   - type: input
     id: related
