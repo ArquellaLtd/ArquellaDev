@@ -1,0 +1,52 @@
+name: 📚 Documentation Feedback
+description: Suggest improvements to the documentation
+title: "[DOCS] "
+labels: ["documentation"]
+assignees: ["davydev"]
+body:
+  - type: input
+    id: doc_link
+    attributes:
+      label: Link to Documentation Page
+      placeholder:
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Type of Issue
+      options:
+        - Outdated Information
+        - Unclear Explanation
+        - Missing Instructions
+        - Typo or Formatting Issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's the issue?
+      placeholder: Explain what needs to be corrected, improved, or added.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Change (if applicable)
+      placeholder: If you have an idea for better wording or structure, share it.
+
+  - type: input
+    id: affected_version
+    attributes:
+      label: Affected Version / Platform
+      placeholder: e.g., v2.3, Android only, docs missing this step
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Context
+      placeholder: Add screenshots, logs, or any related issues.
