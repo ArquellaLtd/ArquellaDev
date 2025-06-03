@@ -1,0 +1,56 @@
+name: 🆘 Support Request
+description: Need help using the software or running into a non-bug issue
+title: "[SUPPORT] "
+labels: ["support"]
+assignees: ["davydev"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One-liner describing your issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe your situation in detail.
+      placeholder: "I'm trying to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What have you tried?
+      description: Include relevant configs, commands, or steps attempted.
+      placeholder: "I tried checking the logs, restarting the app..."
+    validations:
+      required: false
+
+  - type: input
+    id: app
+    attributes:
+      label: Affected App
+      placeholder: Panels / Phones / Maintenance / Connect
+
+  - type: input
+    id: device
+    attributes:
+      label: Device Model
+      placeholder: e.g., Galaxy Tab S6
+
+  - type: input
+    id: os
+    attributes:
+      label: OS Version
+      placeholder: e.g., Android 13
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add logs, screenshots, or any other helpful details.
+      placeholder: Drag and drop screenshots, or paste text below.
