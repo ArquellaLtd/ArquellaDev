@@ -16,7 +16,7 @@ jobs:
             const issue = context.payload.issue;
             const sourceRepo = context.repo.repo;
             const sourceOwner = context.repo.owner;
-            const destOwner = "ArquellaLtd;
+            const destOwner = "ArquellaLtd";
             const destRepo = "ArquellaDevTracker";
 
             const issueTitle = `[From ${sourceRepo}] ${issue.title}`;
