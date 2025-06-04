@@ -18,10 +18,8 @@ jobs:
             const sourceOwner = context.repo.owner;
             const destOwner = "ArquellaLtd";
             const destRepo = "ArquellaDevTracker";
-
             const issueTitle = `[From ${sourceRepo}] ${issue.title}`;
             const issueBody = `**Original author:** @${issue.user.login}\n\n**Original issue URL:** ${issue.html_url}\n\n---\n\n${issue.body}`;
-
             // Create issue in private repo
             const newIssue = await github.rest.issues.create({
               owner: destOwner,
@@ -29,7 +27,6 @@ jobs:
               title: issueTitle,
               body: issueBody
             });
-
             // Optionally close the original issue and leave a comment
             await github.rest.issues.createComment({
               owner: sourceOwner,
@@ -37,7 +34,6 @@ jobs:
               issue_number: issue.number,
               body: `Thanks for submitting. This issue has been moved to our private tracker.`
             });
-
             await github.rest.issues.update({
               owner: sourceOwner,
               repo: sourceRepo,
